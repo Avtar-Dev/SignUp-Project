@@ -1,0 +1,109 @@
+/* Center the form container */
+.main-div {
+  width: 60%;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  font-family: "Arial", sans-serif;
+}
+
+/* Style for section headings */
+h4 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Style for the select, text, and password inputs */
+select,
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s;
+}
+
+/* Input hover and focus styles */
+select:focus,
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+  border-color: #007bff;
+  background-color: #fff;
+  outline: none;
+}
+
+/* Checkbox styles */
+.checkbox-group {
+  margin-bottom: 20px;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+input[type="checkbox"] {
+  margin-right: 10px;
+  transform: scale(1.3);
+}
+
+/* Job preference styling */
+.job-preference-container {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+.job-preference-container label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+.job-preference-container input[type="checkbox"] {
+  margin-right: 12px;
+  transform: scale(1.2);
+}
+
+/* Button styles */
+.btn {
+  width: 100%;
+  padding: 16px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  margin-top: 20px;
+}
+
+/* Button hover effect */
+.btn:hover {
+  background-color: #218838;
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+  .main-div {
+    width: 90%;
+  }
+}
