@@ -17,15 +17,10 @@ const SignUp = () => {
   };
 
   const [value, setValue] = useState(data);
-  // const [selectValue, setSelectValue] = useState("");
 
   const InputHandler = (e) => {
     setValue({ ...value, [e.target.name]: e.target.value });
   };
-
-  // const selectHandle = (e) => {
-  //   setSelectValue(e.target.value);
-  // };
 
   const jobCheckboxHandler = (e) => {
     // const { value: job, checked } = e.target;
@@ -46,102 +41,108 @@ const SignUp = () => {
 
   const BtnHandler = () => {
     console.log("Form data:", value);
-    // console.log("Qualification:", selectValue);
   };
 
   return (
     <div className="main-div">
-      <InputComp
-        type={"text"}
-        name={"name"}
-        placeholder={"Enter Name"}
-        title={"Name"}
-        onChange={InputHandler}
-        value={value.name}
-      />
-      <InputComp
-        type={"email"}
-        name={"email"}
-        placeholder={"Enter Email"}
-        title={"Email"}
-        onChange={InputHandler}
-        value={value.email}
-      />
-
-      <label>
-        <h4>Qualification</h4>
-      </label>
-      <select
-        name="qualification"
-        id="qualification"
-        onChange={InputHandler}
-        value={value.qualification}>
-        <option value="10th">10th</option>
-        <option value="12th">12th</option>
-        <option value="Post Graduate">Post Graduate</option>
-        <option value="Under Graduate">Under Graduate</option>
-        <option value="PHD">PHD</option>
-      </select>
-
-      <div className="checkbox-group">
-        <label>
-          <h4>Status</h4>
-        </label>
-        <CheckboxInput
-          type={"checkbox"}
-          value={"Married"}
-          title={"Married"}
-          name={"maritalStatus"}
+      <div className="container">
+        <h2 className="text">SignUp</h2>
+        <br />
+        <InputComp
+          type={"text"}
+          name={"name"}
+          placeholder={"Enter Name"}
+          title={"Name"}
           onChange={InputHandler}
-          checked={value.maritalStatus === "Married"}
+          value={value.name}
         />
-        <CheckboxInput
-          type={"checkbox"}
-          value={"Unmarried"}
-          title={"Unmarried"}
-          name={"maritalStatus"}
+        <InputComp
+          type={"email"}
+          name={"email"}
+          placeholder={"Enter Email"}
+          title={"Email"}
           onChange={InputHandler}
-          checked={value.maritalStatus === "Unmarried"}
+          value={value.email}
         />
-      </div>
 
-      <div className="job-preference-container">
         <label>
-          <h4>Job Preference</h4>
+          <h4>Qualification</h4>
         </label>
-        {jobsData.map((job) => (
-          <label key={job}>
-            <input
-              type={"checkbox"}
-              value={job}
-              name={"jobs"}
-              onChange={jobCheckboxHandler}
-              checked={value.jobs.includes(job)}
-            />
-            {job}
+        <select
+          name="qualification"
+          className="qualification"
+          onChange={InputHandler}
+          value={value.qualification}>
+          <option value="10th">10th</option>
+          <option value="12th">12th</option>
+          <option value="Post Graduate">Post Graduate</option>
+          <option value="Under Graduate">Under Graduate</option>
+          <option value="PHD">PHD</option>
+        </select>
+
+        <div className="checkbox-group">
+          <label>
+            <h4>Status</h4>
           </label>
-        ))}
-      </div>
+          <br />
+          <div className="checkbox-input">
+            <CheckboxInput
+              type={"checkbox"}
+              value={"Married"}
+              title={"Married"}
+              name={"maritalStatus"}
+              onChange={InputHandler}
+              checked={value.maritalStatus === "Married"}
+            />
+            <CheckboxInput
+              type={"checkbox"}
+              value={"Unmarried"}
+              title={"Unmarried"}
+              name={"maritalStatus"}
+              onChange={InputHandler}
+              checked={value.maritalStatus === "Unmarried"}
+            />
+          </div>
+        </div>
 
-      <InputComp
-        type={"password"}
-        name={"password"}
-        placeholder={"Enter Password"}
-        title={"Password"}
-        onChange={InputHandler}
-        value={value.password}
-      />
-      <InputComp
-        type={"password"}
-        name={"confirmPwd"}
-        placeholder={"Confirm Password"}
-        title={"Re-Enter Password"}
-        onChange={InputHandler}
-        value={value.confirmPwd}
-      />
-      <button className="btn" onClick={BtnHandler}>
-        Submit
-      </button>
+        <div className="job-preference-container">
+          <label>
+            <h4>Job Preference</h4>
+          </label>
+          {jobsData.map((job) => (
+            <label key={job}>
+              <input
+                type={"checkbox"}
+                value={job}
+                name={"jobs"}
+                onChange={jobCheckboxHandler}
+                checked={value.jobs.includes(job)}
+              />
+              {job}
+            </label>
+          ))}
+        </div>
+
+        <InputComp
+          type={"password"}
+          name={"password"}
+          placeholder={"Enter Password"}
+          title={"Password"}
+          onChange={InputHandler}
+          value={value.password}
+        />
+        <InputComp
+          type={"password"}
+          name={"confirmPwd"}
+          placeholder={"Confirm Password"}
+          title={"Re-Enter Password"}
+          onChange={InputHandler}
+          value={value.confirmPwd}
+        />
+        <button className="btn" onClick={BtnHandler}>
+          Submit
+        </button>
+      </div>
     </div>
   );
 };

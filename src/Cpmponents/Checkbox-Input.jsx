@@ -2,6 +2,7 @@ const CheckboxInput = ({ type, title, value, name, onChange, checked }) => {
   return (
     <div>
       <p>{title}</p>
+      {/* <br /> */}
       <input
         type={type}
         value={value}

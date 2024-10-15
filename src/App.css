@@ -1,6 +1,6 @@
 /* Center the form container */
 .main-div {
-  width: 60%;
+  width: 35%;
   margin: 40px auto;
   padding: 30px;
   background-color: #ffffff;
@@ -9,6 +9,9 @@
   font-family: "Arial", sans-serif;
 }
 
+.container {
+  margin-left: 21%;
+}
 /* Style for section headings */
 h4 {
   margin-bottom: 10px;
@@ -22,14 +25,22 @@ select,
 input[type="text"],
 input[type="email"],
 input[type="password"] {
-  width: 100%;
+  width: 22rem;
   padding: 12px;
   margin: 10px 0;
   border: 1px solid #ccc;
-  border-radius: 6px;
+  border-radius: 44px;
   font-size: 16px;
   background-color: #f9f9f9;
   transition: border-color 0.3s;
+}
+
+.qualification {
+  width: 72%;
+}
+
+.text {
+  margin-left: inherit;
 }
 
 /* Input hover and focus styles */
@@ -40,6 +51,11 @@ input[type="password"]:focus {
   border-color: #007bff;
   background-color: #fff;
   outline: none;
+}
+
+.checkbox-input {
+  display: flex;
+  gap: 2rem;
 }
 
 /* Checkbox styles */
@@ -66,6 +82,7 @@ input[type="checkbox"] {
   background-color: #f4f4f4;
   border-radius: 8px;
   margin-top: 10px;
+  width: 50%;
 }
 
 .job-preference-container label {
@@ -82,7 +99,19 @@ input[type="checkbox"] {
 
 /* Button styles */
 .btn {
-  width: 100%;
+  /* width: 100%;
+  padding: 16px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  margin-top: 20px; */
+
+  width: 12rem;
   padding: 16px;
   background-color: #28a745;
   color: #fff;
@@ -93,6 +122,7 @@ input[type="checkbox"] {
   cursor: pointer;
   transition: background-color 0.3s, box-shadow 0.3s;
   margin-top: 20px;
+  margin-left: 17%;
 }
 
 /* Button hover effect */
